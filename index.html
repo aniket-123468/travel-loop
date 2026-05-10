@@ -1,11 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>travelloop</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Traveloop - Personalized Travel Planning</title>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="travelloop.css" />
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
+
 <body>
-    <p>My name is aniket kumar pandey</p>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      Travel<span>Loop</span>
+    </div>
+
+    <ul class="nav-links">
+
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Trips</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Budget</a></li>
+      <li><a href="#">AI Planner</a></li>
+
+    </ul>
+
+    <button class="btn">Get Started</button>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Plan Your Dream Trips With
+        <span>AI Powered TravelLoop</span>
+      </h1>
+
+      <p>
+        Create personalized itineraries, manage budgets,
+        discover destinations, collaborate with friends,
+        and organize your travel experience in one
+        intelligent platform.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="btn">
+          Start Planning
+        </button>
+
+        <button class="btn secondary-btn">
+          Explore Trips
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        alt="Travel Image"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- FEATURES SECTION -->
+
+  <section class="section">
+
+    <div class="section-title">
+
+      <h2>Powerful Features</h2>
+
+      <p>
+        Everything you need to organize, optimize,
+        and enjoy your travel experiences.
+      </p>
+
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <i class="fa-solid fa-route"></i>
+        <h3>Smart Itinerary</h3>
+        <p>
+          Create day-wise multi-city itineraries
+          with intelligent scheduling and timeline views.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-wallet"></i>
+        <h3>Budget Tracking</h3>
+        <p>
+          Automatically estimate travel costs including
+          hotels, transport, meals, and activities.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-earth-americas"></i>
+        <h3>Destination Discovery</h3>
+        <p>
+          Search popular cities, attractions,
+          and hidden gems around the world.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Collaborative Planning</h3>
+        <p>
+          Invite friends and family to build,
+          edit, and manage trips together.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-robot"></i>
+        <h3>AI Recommendations</h3>
+        <p>
+          AI suggests optimized routes,
+          activities, and budget-saving ideas.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-share-nodes"></i>
+        <h3>Trip Sharing</h3>
+        <p>
+          Share your itineraries publicly
+          or privately with custom links.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DASHBOARD SECTION -->
+
+  <section class="section dashboard">
+
+    <div class="section-title">
+
+      <h2>Your Travel Dashboard</h2>
+
+      <p>
+        Monitor upcoming trips, activities,
+        and budget summaries in one place.
+      </p>
+
+    </div>
+
+    <div class="dashboard-container">
+
+      <div class="dashboard-card">
+
+        <h3>Upcoming Trips</h3>
+
+        <div class="trip">
+          <p>Goa Adventure</p>
+          <span>5 Days</span>
+        </div>
+
+        <div class="trip">
+          <p>Dubai Tour</p>
+          <span>7 Days</span>
+        </div>
+
+        <div class="trip">
+          <p>Thailand Vacation</p>
+          <span>10 Days</span>
+        </div>
+
+      </div>
+
+      <div class="dashboard-card">
+
+        <h3>Budget Overview</h3>
+
+        <div class="trip">
+          <p>Total Budget</p>
+          <span>$4500</span>
+        </div>
+
+        <div class="trip">
+          <p>Spent</p>
+          <span>$2100</span>
+        </div>
+
+        <div class="trip">
+          <p>Remaining</p>
+          <span>$2400</span>
+        </div>
+
+      </div>
+
+      <div class="dashboard-card">
+
+        <h3>AI Suggestions</h3>
+
+        <div class="trip">
+          <p>Add Bali to your wishlist</p>
+        </div>
+
+        <div class="trip">
+          <p>Cheaper flights available</p>
+        </div>
+
+        <div class="trip">
+          <p>Weather alert for Dubai</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AI SECTION -->
+
+  <section class="section ai-section">
+
+    <div class="ai-box">
+
+      <div class="ai-content">
+
+        <h2>AI Powered Travel Intelligence</h2>
+
+        <p>
+          Traveloop uses AI to generate personalized
+          travel plans, optimize budgets, recommend
+          destinations, analyze uploaded travel images,
+          and intelligently organize your trips.
+        </p>
+
+        <button class="btn">
+          Try AI Planner
+        </button>
+
+      </div>
+
+      <div class="ai-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="AI Image"
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS SECTION -->
+
+  <section class="section">
+
+    <div class="stats">
+
+      <div class="stat-card">
+        <h2>50K+</h2>
+        <p>Trips Planned</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>120+</h2>
+        <p>Countries Covered</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>98%</h2>
+        <p>User Satisfaction</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>24/7</h2>
+        <p>AI Assistance</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA SECTION -->
+
+  <section class="cta">
+
+    <h2>Start Your Journey Today</h2>
+
+    <p>
+      Join thousands of travelers using Traveloop
+      to organize smarter, travel better,
+      and experience unforgettable adventures.
+    </p>
+
+    <button class="btn">
+      Create Free Account
+    </button>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+
+        <h2>TravelLoop</h2>
+
+        <p class="footer-text">
+          Intelligent travel planning platform
+          designed for modern explorers.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Resources</h3>
+
+        <ul class="footer-links">
+          <li><a href="#">Travel Guides</a></li>
+          <li><a href="#">Budget Planner</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <ul class="footer-links">
+          <li>Email: support@traveloop.com</li>
+          <li>Phone: +91 9876543210</li>
+          <li>Ahmedabad, India</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Traveloop. All Rights Reserved.
+    </div>
+
+  </footer>
+
 </body>
 </html>
