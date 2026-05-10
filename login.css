@@ -6,63 +6,162 @@
 
 body{
   font-family:'Poppins',sans-serif;
+  background:#0f172a;
   min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(to right,#0f172a,#1e293b);
 }
 
 .container{
-  width:100%;
+  display:flex;
+  min-height:100vh;
+}
+
+/* LEFT PANEL */
+
+.left-panel{
+  flex:1;
+  background:
+  linear-gradient(rgba(15,23,42,0.7),
+  rgba(15,23,42,0.8)),
+  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+
+  background-size:cover;
+  background-position:center;
+  position:relative;
+
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:20px;
+  padding:50px;
+}
+
+.left-content{
+  color:white;
+  z-index:2;
+  max-width:500px;
+}
+
+.left-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+  line-height:1.1;
+}
+
+.left-content p{
+  font-size:18px;
+  line-height:1.8;
+  color:#e2e8f0;
+}
+
+/* RIGHT PANEL */
+
+.right-panel{
+  flex:1;
+  background:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
 }
 
 .login-box{
-  width:400px;
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  width:100%;
+  max-width:450px;
+  position:relative;
+}
+
+.back-btn{
+  position:absolute;
+  top:-10px;
+  left:0;
+  color:#0f172a;
+  font-size:18px;
+  text-decoration:none;
 }
 
 .login-box h2{
-  text-align:center;
-  margin-bottom:10px;
+  font-size:38px;
   color:#0f172a;
+  margin-bottom:10px;
 }
 
-.login-box p{
-  text-align:center;
+.subtitle{
   color:#64748b;
-  margin-bottom:30px;
+  margin-bottom:35px;
+}
+
+/* INPUTS */
+
+.input-group{
+  margin-bottom:25px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:10px;
+  font-weight:500;
+  color:#1e293b;
 }
 
 .input-box{
-  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  border:1px solid #cbd5e1;
+  border-radius:12px;
+  padding:0 15px;
+  transition:0.3s;
+}
+
+.input-box:focus-within{
+  border-color:#38bdf8;
+  box-shadow:0 0 0 4px rgba(56,189,248,0.15);
+}
+
+.input-box i{
+  color:#94a3b8;
+  font-size:15px;
 }
 
 .input-box input{
   width:100%;
-  padding:14px;
-  border:1px solid #cbd5e1;
-  border-radius:10px;
+  border:none;
   outline:none;
+  padding:16px 12px;
   font-size:15px;
+  background:transparent;
 }
 
-.input-box input:focus{
-  border-color:#38bdf8;
+.toggle-password{
+  cursor:pointer;
 }
+
+/* OPTIONS */
+
+.options{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+  font-size:14px;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.forgot{
+  color:#38bdf8;
+  text-decoration:none;
+}
+
+/* BUTTON */
 
 .login-btn{
   width:100%;
-  padding:14px;
+  padding:16px;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
   background:#38bdf8;
   color:white;
   font-size:16px;
@@ -73,19 +172,96 @@ body{
 
 .login-btn:hover{
   background:#0ea5e9;
+  transform:translateY(-2px);
 }
 
-.extra-links{
-  margin-top:20px;
-  text-align:center;
+/* DIVIDER */
+
+.divider{
+  display:flex;
+  align-items:center;
+  margin:30px 0;
 }
 
-.extra-links a{
-  text-decoration:none;
-  color:#38bdf8;
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#e2e8f0;
+}
+
+.divider span{
+  margin:0 15px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* SOCIAL LOGIN */
+
+.social-login{
+  display:flex;
+  gap:15px;
+}
+
+.social-btn{
+  flex:1;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
   font-weight:500;
+  transition:0.3s;
 }
 
-.extra-links p{
-  margin-top:15px;
+.google{
+  background:#f1f5f9;
+}
+
+.facebook{
+  background:#eff6ff;
+}
+
+.social-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SIGNUP */
+
+.signup-text{
+  text-align:center;
+  margin-top:30px;
+  color:#64748b;
+}
+
+.signup-text a{
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .left-panel{
+    display:none;
+  }
+
+  .right-panel{
+    width:100%;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .login-box h2{
+    font-size:30px;
+  }
+
+  .social-login{
+    flex-direction:column;
+  }
+
 }
